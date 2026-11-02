@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+work/
+dist/
+dist-*/
+build/
+packaging/SureCopy.icns
+packaging/*.iconset/

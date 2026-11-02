@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "surecopy"
+version = "0.2.0"
+description = "Confident, resumable copies to multiple destinations at once"
+requires-python = ">=3.12"
+dependencies = ["xxhash==4.0.2"]
+
+[project.optional-dependencies]
+gui = ["PySide6-Essentials==6.12.0"]
+
+[project.scripts]
+surecopy = "surecopy.cli:main"
+
+[project.gui-scripts]
+surecopy-app = "surecopy.app:main"
+
+[tool.setuptools.packages.find]
+include = ["surecopy*"]
+
+[tool.setuptools.package-data]
+"surecopy.gui" = ["assets/*.svg"]
